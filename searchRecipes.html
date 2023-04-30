@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--style.css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Font-->
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light p-4">
+        <a class="navbar-brand" href="index.html">
+            <svg width="120" viewBox="0 0 314 95" fill="none" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                    d="M105.35 75H118.4L107.6 53.475C114.125 51.15 118.1 45.675 118.1 38.475C118.1 29.025 111.35 21.825 100.85 21.825H79.775V75H91.625V55.2H95.825L105.35 75ZM91.625 45V32.1H98.6C103.475 32.1 106.1 34.575 106.1 38.55C106.1 42.3 103.475 45 98.6 45H91.625ZM133.939 51.9C134.164 49.125 136.564 45.6 141.364 45.6C146.764 45.6 148.714 49.05 148.864 51.9H133.939ZM149.689 61.575C148.639 64.5 146.314 66.45 142.189 66.45C137.764 66.45 133.939 63.45 133.714 59.25H159.664C159.739 59.025 159.889 57.3 159.889 55.725C159.889 43.725 152.764 36.6 141.214 36.6C131.539 36.6 122.614 44.25 122.614 56.25C122.614 68.775 131.764 76.125 142.039 76.125C151.489 76.125 157.414 70.725 159.214 64.275L149.689 61.575ZM184.384 47.1C188.809 47.1 191.059 49.8 191.884 52.65L202.084 49.575C200.434 42.9 194.434 36.6 184.159 36.6C173.209 36.6 164.509 44.775 164.509 56.4C164.509 67.95 173.434 76.125 184.534 76.125C194.509 76.125 200.659 69.675 202.309 63.15L192.259 60.075C191.434 62.85 188.959 65.625 184.534 65.625C179.809 65.625 175.834 62.325 175.834 56.4C175.834 50.4 179.659 47.1 184.384 47.1ZM220.65 75V37.725H209.25V75H220.65ZM208.275 26.325C208.275 30 211.275 33 214.875 33C218.625 33 221.625 30 221.625 26.325C221.625 22.65 218.625 19.65 214.875 19.65C211.275 19.65 208.275 22.65 208.275 26.325ZM242.036 89.25V72.075C243.761 74.175 247.361 75.825 252.161 75.825C262.586 75.825 269.936 67.65 269.936 56.25C269.936 45.075 263.411 36.825 252.611 36.825C247.286 36.825 243.236 39.15 241.661 41.55V37.725H230.636V89.25H242.036ZM258.761 56.325C258.761 62.55 254.786 65.625 250.286 65.625C245.861 65.625 241.886 62.475 241.886 56.325C241.886 50.1 245.861 47.1 250.286 47.1C254.786 47.1 258.761 50.1 258.761 56.325ZM290.012 89.325L312.962 37.725H300.887L292.637 57.675L283.562 37.725H270.812L286.487 69.975L278.012 89.325H290.012Z"
+                    fill="#233129" />
+                <rect y="17" width="64" height="64" fill="url(#pattern0)" />
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_4_49" transform="scale(0.015625)" />
+                    </pattern>
+                    <image id="image0_4_49" width="64" height="64"
+                        xlink:href="data:image/png;base64,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" />
+                </defs>
+            </svg>
+
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="searchRecipes.html">Search Recipes</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Search Ingredients</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="addRecipes.html">Add Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="myRecipes.html">My Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shoppingList.html">Shopping List</a>
+                </li>
+
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        user
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button"><i class='bx bx-cog'></i> Settings</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-user'></i> Profile</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-group'></i> Connect</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-message'></i> Feedback</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-help-circle'></i> Help</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <main>
+        <div class="divBlacks">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-7">
+                    <div class="p-2">
+                        <h2><b>Search Results for Rindfleisch-Curry-Reispfanne</b></h2>
+                        <div class="search_input pt-4">
+                            <div class="input-group mb-3 w-75">
+                                <input type="text" class="form-control" placeholder="Recipes "
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" id="search_btn" type="button">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h5>Search Filters</h5>
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="search-ingredient">ingredient</label>
+                                        <input type="text" class="form-control" id="search-ingredient"
+                                            placeholder="Ingredient">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="search-preparation">preparation method</label>
+                                        <input type="text" class="form-control" id="search-preparation"
+                                            placeholder="Preparation method">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="search-duration">preparation time</label>
+                                        <input type="number" class="form-control" id="search-duration"
+                                            placeholder="Preparation time">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="search-vegetarian">
+                                            <label class="form-check-label" for="search-vegetarian">Vegetarian</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="search-difficulty">difficulty level</label>
+                                        <select class="form-control" id="search-difficulty">
+                                            <option value="">All</option>
+                                            <option value="easy">Easy</option>
+                                            <option value="medium">Medium</option>
+                                            <option value="hard">Hard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="menu-container" class="container mt-5">
+                                <!-- Menu items will be displayed here -->
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="https://img.chefkoch-cdn.de/rezepte/2165621347603963/bilder/603574/crop-642x428/rindfleisch-curry-reispfanne.jpg"
+                            class="w-100 p-2 rounded" alt="Rindfleisch-Curry-Reispfanne">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-3">
+                            <h4>Rindfleisch-Curry-Reispfanne</h4>
+                            <div class="ingredients">
+                                <ul>
+                                    <li>
+                                        500 g Rinderfilet(s), in Streifen geschnitten
+                                    </li>
+                                    <li>
+                                        250 g Reis, gegart
+                                    </li>
+                                    <li>
+                                        100 g Erbsen, TK
+                                    </li>
+                                    <li>
+                                        1 Paprikaschote(n), rot, in Rauten geschnitten
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="p-3">
+                    <button class="btn btn-primary p-3 w-100">Mehr Ansehen</button><br>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="https://img.chefkoch-cdn.de/rezepte/1528671258279515/bilder/793090/crop-642x428/chrissis-gefuellte-spinat-pfannkuchen.jpg"
+                            class="w-100 p-2 rounded" alt="Rindfleisch-Curry-Reispfanne">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-3">
+                            <h4>Chrissis gefüllte Spinat-Pfannkuchen</h4>
+                            <div class="ingredients">
+                                <ul>
+                                    <li>
+                                        500 g Rinderfilet(s), in Streifen geschnitten
+                                    </li>
+                                    <li>
+                                        250 g Reis, gegart
+                                    </li>
+                                    <li>
+                                        100 g Erbsen, TK
+                                    </li>
+                                    <li>
+                                        1 Paprikaschote(n), rot, in Rauten geschnitten
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3">
+
+                    <button class="btn btn-primary p-3 mt-2 w-100">Mehr Ansehen</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="https://img.chefkoch-cdn.de/rezepte/2445071385311516/bilder/798994/crop-642x428/reis-hackfleisch-pfanne-mit-paprika.jpg"
+                            class="w-100 p-2 rounded" alt="Rindfleisch-Curry-Reispfanne">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-3">
+                            <h4>Chrissis gefüllte Spinat-Pfannkuchen</h4>
+                            <div class="ingredients">
+                                <ul>
+                                    <li>
+                                        500 g Rinderfilet(s), in Streifen geschnitten
+                                    </li>
+                                    <li>
+                                        250 g Reis, gegart
+                                    </li>
+                                    <li>
+                                        100 g Erbsen, TK
+                                    </li>
+                                    <li>
+                                        1 Paprikaschote(n), rot, in Rauten geschnitten
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3">
+
+                    <button class="btn btn-primary p-3 mt-2 w-100">Mehr Ansehen</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="https://img.chefkoch-cdn.de/rezepte/1840211298298868/bilder/815458/crop-642x428/kartoffel-paprika-tortilla.jpg"
+                            class="w-100 p-2 rounded" alt="Rindfleisch-Curry-Reispfanne">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-3">
+                            <h4>Chrissis gefüllte Spinat-Pfannkuchen</h4>
+                            <div class="ingredients">
+                                <ul>
+                                    <li>
+                                        500 g Rinderfilet(s), in Streifen geschnitten
+                                    </li>
+                                    <li>
+                                        250 g Reis, gegart
+                                    </li>
+                                    <li>
+                                        100 g Erbsen, TK
+                                    </li>
+                                    <li>
+                                        1 Paprikaschote(n), rot, in Rauten geschnitten
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3">
+
+                    <button class="btn btn-primary p-3 mt-2 w-100">Mehr Ansehen</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

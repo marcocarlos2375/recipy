@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--style.css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+
+    <!--Font-->
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light p-4">
+        <a class="navbar-brand" href="index.html">
+            <svg width="120" viewBox="0 0 314 95" fill="none" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                    d="M105.35 75H118.4L107.6 53.475C114.125 51.15 118.1 45.675 118.1 38.475C118.1 29.025 111.35 21.825 100.85 21.825H79.775V75H91.625V55.2H95.825L105.35 75ZM91.625 45V32.1H98.6C103.475 32.1 106.1 34.575 106.1 38.55C106.1 42.3 103.475 45 98.6 45H91.625ZM133.939 51.9C134.164 49.125 136.564 45.6 141.364 45.6C146.764 45.6 148.714 49.05 148.864 51.9H133.939ZM149.689 61.575C148.639 64.5 146.314 66.45 142.189 66.45C137.764 66.45 133.939 63.45 133.714 59.25H159.664C159.739 59.025 159.889 57.3 159.889 55.725C159.889 43.725 152.764 36.6 141.214 36.6C131.539 36.6 122.614 44.25 122.614 56.25C122.614 68.775 131.764 76.125 142.039 76.125C151.489 76.125 157.414 70.725 159.214 64.275L149.689 61.575ZM184.384 47.1C188.809 47.1 191.059 49.8 191.884 52.65L202.084 49.575C200.434 42.9 194.434 36.6 184.159 36.6C173.209 36.6 164.509 44.775 164.509 56.4C164.509 67.95 173.434 76.125 184.534 76.125C194.509 76.125 200.659 69.675 202.309 63.15L192.259 60.075C191.434 62.85 188.959 65.625 184.534 65.625C179.809 65.625 175.834 62.325 175.834 56.4C175.834 50.4 179.659 47.1 184.384 47.1ZM220.65 75V37.725H209.25V75H220.65ZM208.275 26.325C208.275 30 211.275 33 214.875 33C218.625 33 221.625 30 221.625 26.325C221.625 22.65 218.625 19.65 214.875 19.65C211.275 19.65 208.275 22.65 208.275 26.325ZM242.036 89.25V72.075C243.761 74.175 247.361 75.825 252.161 75.825C262.586 75.825 269.936 67.65 269.936 56.25C269.936 45.075 263.411 36.825 252.611 36.825C247.286 36.825 243.236 39.15 241.661 41.55V37.725H230.636V89.25H242.036ZM258.761 56.325C258.761 62.55 254.786 65.625 250.286 65.625C245.861 65.625 241.886 62.475 241.886 56.325C241.886 50.1 245.861 47.1 250.286 47.1C254.786 47.1 258.761 50.1 258.761 56.325ZM290.012 89.325L312.962 37.725H300.887L292.637 57.675L283.562 37.725H270.812L286.487 69.975L278.012 89.325H290.012Z"
+                    fill="#233129" />
+                <rect y="17" width="64" height="64" fill="url(#pattern0)" />
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_4_49" transform="scale(0.015625)" />
+                    </pattern>
+                    <image id="image0_4_49" width="64" height="64"
+                        xlink:href="data:image/png;base64,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" />
+                </defs>
+            </svg>
+
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="searchRecipes.html">Search Recipes</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Search Ingredients</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="addRecipes.html">Add Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="myRecipes.html">My Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shoppingList.html">Shopping List</a>
+                </li>
+
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        user
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button"><i class='bx bx-cog'></i> Settings</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-user'></i> Profile</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-group'></i> Connect</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-message'></i> Feedback</button>
+                        <button class="dropdown-item" type="button"><i class='bx bx-help-circle'></i> Help</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="p-3">
+                <div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
+                            placeholder="" value="Chrissis gefüllte Spinat-Pfannkuchen">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Grad</label>
+                        <input type="number" class="form-control" name="title" id="title" aria-describedby="helpId"
+                            placeholder="" value="68">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Preparation Time (in min)</label>
+                        <input type="number" class="form-control" name="title" id="title" aria-describedby="helpId"
+                            placeholder="" value="50">
+                    </div>
+                    <div class="custom-file-upload">
+                        <input type="file" id="file-upload" class="w-100 btn btn-outline-primary"
+                            onchange="readURL(this);" />
+                        <label for="file-upload"><i class='bx bx-cloud-upload specification_icon'></i> Choose an
+                            Image</label>
+                    </div>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header bg-white" id="headingOne">
+                                <h5 class="mb-0">
+
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <button class="btn btn-link" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                <span class="ingredients text-dark">e</span>
+                                                <span class="quantite text-dark"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-3">
+                                            <button class="btn btn-danger btn-sm remove-btn" id="btn-sm "><i
+                                                    class="bx bx-trash"></i></button>
+                                            <button class="btn btn-primary btn-add remove-btn" id="btn-add"><i
+                                                    class="bx bx-copy"></i></button>
+                                        </div>
+                                    </div>
+
+
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="ingredients">Ingredients</label>
+                                        <input type="text" class="form-control" name="ingredients" id="ingredients"
+                                            aria-describedby="helpId" placeholder="" value="Reis">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ingredients">quantite</label>
+                                        <input type="number" class="form-control" name="quantite" id="quantite"
+                                            aria-describedby="helpId" value="50" placeholder="">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ingredients">Designation</label>
+                                        <input type="text" class="form-control" name="Designation" id="Designation"
+                                            aria-describedby="helpId" value="g" placeholder="">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <br>
+                    <div id="editor"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="p-5">
+                <h4><b>Preview</b></h4>
+                <p>
+                    This is the preview of your Recipe.
+                </p>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-5">
+                                <img id="blah" src="http://placehold.it/180" alt="your image" />
+
+                            </div>
+                            <div class="col-7">
+                                <h4>Chrissis gefüllte Spinat-Pfannkuchen</h4>
+                                <div class="ingredients">
+                                    <ul>
+                                        <li>
+                                            500 g Rinderfilet(s), in Streifen geschnitten
+                                        </li>
+                                        <li>
+                                            250 g Reis, gegart
+                                        </li>
+                                        <li>
+                                            100 g Erbsen, TK
+                                        </li>
+                                        <li>
+                                            1 Paprikaschote(n), rot, in Rauten geschnitten
+                                        </li>
+                                    </ul>
+                                </div>
+                                ------
+
+                                <div class="specifications">
+                                    <table class="w-75">
+                                        <tr>
+                                            <td>
+                                                <i class='bx bx-dish specification_icon'></i>
+                                            </td>
+                                            <td>
+                                                <i class='bx bx-bowl-rice specification_icon'></i>
+                                            </td>
+                                            <td>
+                                                <i class='bx bx-alarm specification_icon'></i>
+                                            </td>
+                                            <td>
+                                                <i class='bx bx-star specification_icon'></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="grad">Grad 68</div>
+                                            </td>
+                                            <td>
+                                                <div class="mittel">Mittel</div>
+                                            </td>
+                                            <td>
+                                                <div class="duration">60 Min</div>
+                                            </td>
+                                            <td>
+                                                <div class="stars"> 4.7</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        img {
+            max-width: 180px;
+        }
+
+
+
+        /* personnaliser l'apparence du bouton pour charger l'image */
+        .custom-file-upload {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 40px;
+            background-color: #fff;
+            color: #007bff;
+            ;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            border: 1px solid #007bff;
+        }
+
+        /* personnaliser l'apparence du label */
+        .custom-file-upload label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            padding: 0;
+            margin: 0;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        /* cacher l'input file par défaut */
+        .custom-file-upload input[type='file'] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* personnaliser l'apparence de l'image affichée */
+        #blah {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <script>
+
+        var toolbarOptions = [['bold', 'italic', 'underline', 'strike'],
+        ['link', 'image'],
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{ 'align': [] }],
+        ['blockquote', 'code-block']
+        ];
+
+        var quill = new Quill('#editor', {
+            theme: 'snow',
+            modules: {
+                toolbar: toolbarOptions
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Dupliquer une div
+            $('body').on('click', '.btn-add', function () {
+                let clonedCard = $(this).closest('.card').clone(true);
+                clonedCard.find('input').val('');
+                clonedCard.find('.collapse').removeClass('show');
+                clonedCard.find('.collapse').attr('id', function (i, oldId) {
+                    return 'collapse-' + (parseInt(oldId.split('-')[1]) + 1);
+                });
+                clonedCard.find('.btn-link').attr('data-target', function (i, oldTarget) {
+                    return '#collapse-' + (parseInt(oldTarget.split('-')[1]) + 1);
+                });
+                clonedCard.find('.btn-link').attr('aria-controls', function (i, oldControls) {
+                    return 'collapse-' + (parseInt(oldControls.split('-')[1]) + 1);
+                });
+                $('#accordion').append(clonedCard);
+            });
+
+            // Supprimer une div
+            $('body').on('click', '.btn-sm', function () {
+                if ($('.card', '#accordion').length > 1) {
+                    $(this).closest('.card').remove();
+                } else {
+                    alert("Vous ne pouvez pas supprimer la dernière div.");
+                }
+            });
+
+            function updateSpanText() {
+                $('.card').each(function () {
+                    let ingredientsVal = $(this).find('input[name="ingredients"]').val();
+                    let quantiteVal = $(this).find('input[name="quantite"]').val();
+                    $(this).find('.ingredients').text(ingredientsVal);
+                    $(this).find('.quantite').text(quantiteVal);
+                });
+            }
+
+            // Mettre à jour les valeurs lors de la modification des champs input
+            $('body').on('input', 'input[name="ingredients"], input[name="quantite"]', function () {
+                updateSpanText();
+            });
+
+            // Mettre à jour les valeurs au chargement initial de la page
+            $(document).ready(function () {
+                updateSpanText();
+            });
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
